@@ -1,0 +1,27 @@
+# Ignore Python virtual environments
+venv/
+.venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore video files - they should be uploaded, not built into the image
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Ignore the temporary upload folder
+uploads/
+
+# Ignore Git and other VCS files
+.git
+.gitignore
+
+# Ignore the tests directory for the final image
+tests/
+
+# Ignore Docker files themselves
+Dockerfile
+.dockerignore
