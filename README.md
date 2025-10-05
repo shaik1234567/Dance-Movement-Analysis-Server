@@ -68,59 +68,6 @@ Uploads a video file for pose analysis.
 curl -X POST -F "file=@/path/to/your/video.mp4" http://localhost:5000/analyze
 ```
 
-### Response (200 OK):
-
-```json
-{
-  "video_path": "uploads/your_video.mp4",
-  "duration_seconds": 15.33,
-  "total_frames": 460,
-  "processed_frames": 230,
-  "fps": 30.0,
-  "frame_stride": 2,
-  "unique_poses_detected": 5,
-  "pose_statistics": [
-    {
-      "pose": "arms_up",
-      "frames_detected": 108,
-      "duration_seconds": 7.2,
-      "percentage": 46.96
-    },
-    {
-      "pose": "standing",
-      "frames_detected": 122,
-      "duration_seconds": 8.13,
-      "percentage": 53.04
-    }
-  ],
-  "timeline": [
-    {
-      "pose": "standing",
-      "start_frame": 0,
-      "end_frame": 15,
-      "start_time": 0.0,
-      "end_time": 0.5,
-      "duration": 0.5
-    },
-    {
-      "pose": "arms_up",
-      "start_frame": 16,
-      "end_frame": 124,
-      "start_time": 0.53,
-      "end_time": 4.13,
-      "duration": 3.6
-    }
-  ]
-}
-```
-
-### Error Response (400):
-
-```json
-{
-  "error": "No file part in the request"
-}
-```
 
 ## Thought Process & Design Choices
 
@@ -147,24 +94,6 @@ The deployment journey involved debugging missing system libraries and memory co
 - Adding OpenCV dependencies to Dockerfile
 - Selecting appropriate VM size **(e2-standard-2 on GCP)**
 - Configuring Gunicorn with **--timeout** flags to handle long video processing
-
-## Deployment on Google Cloud Platform
-
-**Build and deploy:**
-
-```bash
-# Build and push to Container Registry
-gcloud builds submit --tag gcr.io/YOUR_PROJECT_ID/dance-analyzer
-
-# Deploy to Cloud Run
-gcloud run deploy dance-analyzer \
-  --image gcr.io/YOUR_PROJECT_ID/dance-analyzer \
-  --platform managed \
-  --region us-central1 \
-  --memory 4Gi \
-  --timeout 300s \
-  --allow-unauthenticated
-```
 
 ## Connecting with Callus's Vision
 
