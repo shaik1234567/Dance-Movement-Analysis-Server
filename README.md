@@ -97,8 +97,8 @@ The deployment journey involved debugging missing system libraries and memory co
 
 ## Connecting with Callus's Vision
 
-This project demonstrates end-to-end ownership of an AI/ML service, from core algorithm development to scalable cloud deployment. 
+This project demonstrates end-to-end ownership of an AI/ML service—from core pose detection algorithm development, through Docker-based containerization, to the creation of a production-ready REST API service.
 
-The implementation goes beyond a standalone Python script to deliver a complete, production-ready service. By containerizing with Docker and exposing functionality through a robust Flask/Gunicorn API, the project transforms an AI model into a practical, integrable service.
+The implementation goes beyond a standalone Python script, delivering a complete and extensible service that is easily portable and integrable. By leveraging Docker, the system can be reliably executed in any environment with minimal setup. The Flask API exposes pose detection as a practical service, ready for integration into other systems or platforms.
 
-Deploying to Google Cloud Platform showcases the ability to operate in production-grade cloud environments. This complete lifecycle—from local development to a live, documented public endpoint—reflects the full-stack and DevOps-oriented skill set required to successfully deliver robust and scalable cloud services.
+While this project is currently validated on local infrastructure, the architecture is fully cloud-ready. With minimal adjustments, it can be deployed to any public cloud (such as Google Cloud Platform or AWS) to demonstrate production-scale operability and integration. This lifecycle—from local development to a documented, ready-to-deploy container—reflects the full-stack, DevOps-oriented mindset needed to deliver robust, scalable AI services.
