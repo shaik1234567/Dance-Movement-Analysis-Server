@@ -2,7 +2,7 @@
 
 A cloud-based AI/ML server that processes short-form dance videos to detect and summarize dance poses using advanced computer vision. Built with Python, MediaPipe, and Flask, containerized with Docker, and deployed on Google Cloud Platform.
 
-## Features
+## Feature
 
 * **Advanced Pose Detection**: Analyzes video files to detect 33 key body landmarks in each frame using MediaPipe
 * **17 Movement Classifications**: Identifies comprehensive dance poses including arms_up, t_pose, squat, jump, lunges, side stretches, leans, and more
