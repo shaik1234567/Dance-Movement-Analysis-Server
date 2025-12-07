@@ -4,7 +4,7 @@ venv/
 
 # Ignore Python cache files
 __pycache__/
-*.py
+*.pyc
 
 # Ignore video files - they should be uploaded, not built into the image
 *.mp4
@@ -26,3 +26,4 @@ tests/
 Dockerfile
 
 .dockerignore
+
