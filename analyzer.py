@@ -10,7 +10,7 @@ from enum import Enum
 mp_pose = mp.solutions.pose
 mp_drawing = mp.solutions.drawing_utils
 
-# ==================== UTILITIES ====================
+# ==================== UTILITIES ===================
 
 def to_tuple(lm) -> Tuple[float, float, float]:
     """Convert MediaPipe landmark to tuple."""
@@ -509,4 +509,5 @@ if __name__ == "__main__":
         json.dump(results, indent=2, fp=f)
     
     print(f"\nResults saved to: {output_json}")
+
     print(json.dumps(results, indent=2))
