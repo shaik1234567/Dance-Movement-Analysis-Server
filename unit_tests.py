@@ -7,7 +7,7 @@ from analyzer import angle_between, detect_simple_pose_from_features
 
 def test_angle_between_right_angle():
     """
-    Tests the angle_between function with two perpendicular vectors
+    Tests the angle_between function with two perpendicular vectors.
     The expected result should be 90 degrees.
     """
     # Define three points that form a perfect right angle at point 'b'
@@ -55,3 +55,4 @@ def test_t_pose_detection():
     # Assert that the function correctly identified the pose as 't_pose'
 
     assert detected_pose == "t_pose"
+
