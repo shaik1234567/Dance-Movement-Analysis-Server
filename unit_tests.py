@@ -1,6 +1,6 @@
 
 import pytest
-# Import the functions you want to test from your main script
+# Import the functions you want to test from your main sccripts
 from analyzer import angle_between, detect_simple_pose_from_features
 
 #  Test 1: Test a utility function 
@@ -55,4 +55,5 @@ def test_t_pose_detection():
     # Assert that the function correctly identified the pose as 't_pose'
 
     assert detected_pose == "t_pose"
+
 
