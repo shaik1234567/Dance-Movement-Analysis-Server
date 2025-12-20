@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonif
+from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
 # Import the main function from  analysis script
 from analyzer import analyze_video
@@ -70,3 +70,4 @@ def upload_and_analyze_video():
 if __name__ == '__main__':
 
     app.run()
+
