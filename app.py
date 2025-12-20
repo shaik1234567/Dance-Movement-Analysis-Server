@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonif
 from werkzeug.utils import secure_filename
 # Import the main function from  analysis script
 from analyzer import analyze_video
@@ -68,4 +68,5 @@ def upload_and_analyze_video():
     return jsonify({"error": "File type not allowed"}), 400
 
 if __name__ == '__main__':
+
     app.run()
