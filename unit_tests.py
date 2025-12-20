@@ -27,7 +27,7 @@ def test_angle_between_right_angle():
     assert 89.9 < calculated_angle < 90.1
 
 
-#  Test 2: Test a logic-based function 
+#  Test 2:: Test a logic-based function 
 
 def test_t_pose_detection():
     """
@@ -55,5 +55,6 @@ def test_t_pose_detection():
     # Assert that the function correctly identified the pose as 't_pose'
 
     assert detected_pose == "t_pose"
+
 
 
