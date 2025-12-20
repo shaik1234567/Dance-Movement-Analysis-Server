@@ -4,7 +4,7 @@ FROM python:3.9-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the file that lists the dependencies
+# Copy the file that lists the dependencie
 COPY requirements.txt .
 
 # Install system-level dependencies required by OpenCV
@@ -25,3 +25,4 @@ CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "300", "app:app"]
 COPY . /app
 WORKDIR /app
 RUN pip install pytest
+
